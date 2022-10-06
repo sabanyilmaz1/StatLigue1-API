@@ -1,0 +1,90 @@
+@model ProjetGL.Models.Joueur
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Joueur</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrenomJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrenomJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgeJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgeJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NationaliteJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NationaliteJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TailleJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TailleJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Equipe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Equipe.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PosteJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PosteJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchJouee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MatchJouee)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartonJaune)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartonJaune)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartonRouge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartonRouge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ButJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ButJoueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PasseDecisiveJoueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PasseDecisiveJoueur)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,87 @@
+@model ProjetGL.Models.Joueur
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Joueur</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EquipeId" class="control-label"></label>
+                <select asp-for="EquipeId" class ="form-control" asp-items="ViewBag.EquipeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomJoueur" class="control-label"></label>
+                <input asp-for="NomJoueur" class="form-control" />
+                <span asp-validation-for="NomJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrenomJoueur" class="control-label"></label>
+                <input asp-for="PrenomJoueur" class="form-control" />
+                <span asp-validation-for="PrenomJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgeJoueur" class="control-label"></label>
+                <input asp-for="AgeJoueur" class="form-control" />
+                <span asp-validation-for="AgeJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NationaliteJoueur" class="control-label"></label>
+                <input asp-for="NationaliteJoueur" class="form-control" />
+                <span asp-validation-for="NationaliteJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TailleJoueur" class="control-label"></label>
+                <input asp-for="TailleJoueur" class="form-control" />
+                <span asp-validation-for="TailleJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PosteJoueur" class="control-label"></label>
+                <input asp-for="PosteJoueur" class="form-control" />
+                <span asp-validation-for="PosteJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchJouee" class="control-label"></label>
+                <input asp-for="MatchJouee" class="form-control" />
+                <span asp-validation-for="MatchJouee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CartonJaune" class="control-label"></label>
+                <input asp-for="CartonJaune" class="form-control" />
+                <span asp-validation-for="CartonJaune" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CartonRouge" class="control-label"></label>
+                <input asp-for="CartonRouge" class="form-control" />
+                <span asp-validation-for="CartonRouge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ButJoueur" class="control-label"></label>
+                <input asp-for="ButJoueur" class="form-control" />
+                <span asp-validation-for="ButJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasseDecisiveJoueur" class="control-label"></label>
+                <input asp-for="PasseDecisiveJoueur" class="form-control" />
+                <span asp-validation-for="PasseDecisiveJoueur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

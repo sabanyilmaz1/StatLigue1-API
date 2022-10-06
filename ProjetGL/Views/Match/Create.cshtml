@@ -1,0 +1,51 @@
+@model ProjetGL.Models.Match
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Match</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EquipeDId" class="control-label"></label>
+                <select asp-for="EquipeDId" class ="form-control" asp-items="ViewBag.EquipeDId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EquipeEId" class="control-label"></label>
+                <select asp-for="EquipeEId" class ="form-control" asp-items="ViewBag.EquipeEId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScoreD" class="control-label"></label>
+                <input asp-for="ScoreD" class="form-control" />
+                <span asp-validation-for="ScoreD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScoreE" class="control-label"></label>
+                <input asp-for="ScoreE" class="form-control" />
+                <span asp-validation-for="ScoreE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateMatch" class="control-label"></label>
+                <input asp-for="DateMatch" class="form-control" />
+                <span asp-validation-for="DateMatch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

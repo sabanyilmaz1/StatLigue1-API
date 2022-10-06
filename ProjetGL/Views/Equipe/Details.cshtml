@@ -1,0 +1,107 @@
+@model ProjetGL.Models.Equipe
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Equipe</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomEquipe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomEquipe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AcronymeClub)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AcronymeClub)
+            
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomEntraineur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomEntraineur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombrePoints)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombrePoints)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreVictoire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreVictoire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreDefaite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreDefaite)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreNul)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreNul)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DifferencedeBut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DifferencedeBut)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassementEquipe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClassementEquipe)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LesJoueurs)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Poste</th>
+                    <th>But</th>
+                    <th>Passe Décisive</th>
+                </tr>
+                @foreach (var item in Model.LesJoueurs)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NomJoueur)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PrenomJoueur)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PosteJoueur)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ButJoueur)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PasseDecisiveJoueur)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,79 @@
+@model IEnumerable<ProjetGL.Models.Equipe>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Les Equipes de la Ligue 1 2021/2022</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomEquipe)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.NomEntraineur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombrePoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreVictoire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreDefaite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreNul)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DifferencedeBut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassementEquipe)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img height=25px src="@Url.Content("./images/logoEquipes/" + item.AcronymeClub +".png")" alt="Image" />
+                @Html.DisplayFor(modelItem => item.NomEquipe) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomEntraineur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombrePoints)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreVictoire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDefaite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreNul)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DifferencedeBut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassementEquipe)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

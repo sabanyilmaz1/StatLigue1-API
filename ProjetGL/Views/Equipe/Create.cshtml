@@ -1,0 +1,73 @@
+@model ProjetGL.Models.Equipe
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Equipe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomEquipe" class="control-label"></label>
+                <input asp-for="NomEquipe" class="form-control" />
+                <span asp-validation-for="NomEquipe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AcronymeClub" class="control-label"></label>
+                <input asp-for="AcronymeClub" class="form-control" />
+                <span asp-validation-for="AcronymeClub" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomEntraineur" class="control-label"></label>
+                <input asp-for="NomEntraineur" class="form-control" />
+                <span asp-validation-for="NomEntraineur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombrePoints" class="control-label"></label>
+                <input asp-for="NombrePoints" class="form-control" />
+                <span asp-validation-for="NombrePoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreVictoire" class="control-label"></label>
+                <input asp-for="NombreVictoire" class="form-control" />
+                <span asp-validation-for="NombreVictoire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreDefaite" class="control-label"></label>
+                <input asp-for="NombreDefaite" class="form-control" />
+                <span asp-validation-for="NombreDefaite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreNul" class="control-label"></label>
+                <input asp-for="NombreNul" class="form-control" />
+                <span asp-validation-for="NombreNul" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DifferencedeBut" class="control-label"></label>
+                <input asp-for="DifferencedeBut" class="form-control" />
+                <span asp-validation-for="DifferencedeBut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassementEquipe" class="control-label"></label>
+                <input asp-for="ClassementEquipe" class="form-control" />
+                <span asp-validation-for="ClassementEquipe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
