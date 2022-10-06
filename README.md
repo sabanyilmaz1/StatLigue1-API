@@ -1,2 +1,2 @@
 # StatLigue1
-Backend of a mobile application, ASP.NET Core MVC
+Backend of a mobile application, C# ASP.NET Core MVC
